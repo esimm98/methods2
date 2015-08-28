@@ -8,7 +8,15 @@ module Methods2
 		end
 	end
 	
-	# TODO - write ice_cream_party?
+	def ice_cream_party?(i, c)
+		if(i < 5 || c < 5)
+			return 0
+		elsif(i / c >= 2 || c / i >= 2)
+			return 2
+		else
+			return 1
+		end
+	end
 	
 	# TODO - write successful_squirrel_party?
 	
