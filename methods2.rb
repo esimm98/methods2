@@ -18,7 +18,13 @@ module Methods2
 		end
 	end
 	
-	# TODO - write successful_squirrel_party?
+	def successful_squirrel_party?(nuts, weekend)
+		if(nuts >= 40 && (weekend || nuts <= 60))
+			return true
+		else
+			return false
+		end
+	end
 	
 	# TODO - write ticket
 
