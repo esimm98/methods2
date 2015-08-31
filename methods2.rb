@@ -26,7 +26,14 @@ module Methods2
 		end
 	end
 	
-	# TODO - write ticket
+	def write_ticket?(a, b, c)
+		if(a + b = 10 || b + c = 10 || a + c = 10)
+			return 10
+		elsif ((a + b) - (b + c) = 10 || (a + b) - (c + c) = 10)
+			return 5
+		else
+			return 0
+	end
 
 	# TODO - write in_order?
 
