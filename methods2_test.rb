@@ -25,8 +25,10 @@ class Methods2Test < MiniTest::Test
 		assert_equal 0, @m.ice_cream_party?(6, 3)
 		assert_equal 1, @m.ice_cream_party?(5, 5)
 		assert_equal 1, @m.ice_cream_party?(10, 10)
+		assert_equal 1, @m.ice_cream_party?(5, 9)
 		assert_equal 2, @m.ice_cream_party?(10, 5)
 		assert_equal 2, @m.ice_cream_party?(5, 10)
+		assert_equal 2, @m.ice_cream_party?(5, 20)
 	end
 
 	def test_successful_squirrel_party
@@ -36,6 +38,16 @@ class Methods2Test < MiniTest::Test
 		assert_equal true, @m.successful_squirrel_party?(60, false)
 		assert_equal false, @m.successful_squirrel_party?(70, false)
 		assert_equal true, @m.successful_squirrel_party?(70, true)
+	end
+
+	def test_write_ticket
+		assert_equal 10, @m.write_ticket?(7, 3, 5)
+		assert_equal 10, @m.write_ticket?(2, 8, 3)
+		assert_equal 10, @m.write_ticket?(10, 0, 0)
+		assert_equal 0, @m.write_ticket?(3, 3, 3)
+		assert_equal 0, @m.write_ticket?(4, 5, 4)
+		assert_equal 5, @m.write_ticket?(12, 3, 2)
+		assert_equal 5, @m.write_ticket?(1, 12, 2)
 	end
 
 end
