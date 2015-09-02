@@ -44,9 +44,17 @@ module Methods2
 		(a - b).abs >= 10 || (a - c).abs >= 10 || (b - c).abs >= 10
 	end
 	
-	# def fizz_string(str)
-	#	return list("str")
-	# end
+	def fizz_string(str)
+		if str[0] == "f" && str.reverse[0] == "b"
+			return "FizzBuzz"
+		elsif str.reverse[0] == "b"
+			return "Buzz"
+		elsif str[0] == "f"
+			return "Fizz"
+		else
+			return str
+		end	
+	end
 
 	def first_last_six?(a, b, c, d)
 		array = [a, b, c, d]
