@@ -36,7 +36,9 @@ module Methods2
 		end
 	end
 
-	# TODO - write in_order?
+	def write_in_order?(a, b, c, bOk)
+		c > b && (b > a || bOk)
+	end
 
 	# TODO - write less_by_ten?
 	

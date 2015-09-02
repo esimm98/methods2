@@ -50,6 +50,14 @@ class Methods2Test < MiniTest::Test
 		assert_equal 5, @m.write_ticket?(1, 12, 2)
 	end
 
+	def test_write_in_order
+		assert_equal true, @m.write_in_order?(1, 2, 3, false)
+		assert_equal true, @m.write_in_order?(2, 1, 4, true)
+		assert_equal false, @m.write_in_order?(2, 1, 4, false)
+		assert_equal false, @m.write_in_order?(0, 0, 0, true)
+		assert_equal true, @m.write_in_order?(0, 0, 1, true)
+	end
+
 	# def test_fizz_string
 	#	assert_equal Fizz, @m.fizz_string(fizz)
 	#	assert_equal Fizz, @m.fizz_string(fudge)
