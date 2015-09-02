@@ -66,6 +66,8 @@ module Methods2
 		return array
 	end
 
-	# TODO - write double23?
+	def double23?
+		array = []
+	end
 
 end

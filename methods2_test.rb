@@ -86,4 +86,9 @@ class Methods2Test < MiniTest::Test
 		assert_equal [2, 3, 4, 1], @m.rotate_left(1, 2, 3, 4)
 		assert_equal [5, 7, 9, 3], @m.rotate_left(3, 5, 7, 9)
 	end
+
+	def test_double23
+		assert_equal true, @m.double23?(1, 2, 3, 4)
+	end
+
 end
