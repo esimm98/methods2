@@ -44,8 +44,9 @@ module Methods2
 	#	return list("str")
 	# end
 
-	def first_last_six?
-		
+	def first_last_six?(a, b, c, d)
+		array = [a, b, c, d]
+		array[0] == 6 || array.reverse[0] == 6
 	end
 
 	# TODO - write rotate_left

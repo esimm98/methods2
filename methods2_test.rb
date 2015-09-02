@@ -60,6 +60,10 @@ class Methods2Test < MiniTest::Test
 	# end
 
 	def test_first_last_six
-		assert_equal 0, @m.write_first_last_six?(Array.new(4) {|i||5|  })
+		assert_equal true, @m.first_last_six?(2, 5, 1, 6)
+		assert_equal true, @m.first_last_six?(6, 1, 9, 5)
+		assert_equal true, @m.first_last_six?(6, 1, 9, 6)
+		assert_equal false, @m.first_last_six?(1, 2, 3, 4)
+		assert_equal false, @m.first_last_six?(5, 6, 7, 8)
 	end
 end
