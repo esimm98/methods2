@@ -26,7 +26,7 @@ module Methods2
 		end
 	end
 	
-	def write_ticket?(a, b, c)
+	def ticket?(a, b, c)
 		if(a + b == 10 || b + c == 10 || a + c == 10)
 			return 10
 		elsif ((a + b) - (b + c) == 10 || (a + b) - (a + c) == 10)
@@ -36,7 +36,7 @@ module Methods2
 		end
 	end
 
-	def write_in_order?(a, b, c, bOk)
+	def in_order?(a, b, c, bOk)
 		c > b && (b > a || bOk)
 	end
 
@@ -61,7 +61,10 @@ module Methods2
 		array[0] == 6 || array.reverse[0] == 6
 	end
 
-	# TODO - write rotate_left
+	def rotate_left(a, b, c, d)
+		array = [b, c, d, a]
+		return array
+	end
 
 	# TODO - write double23?
 
