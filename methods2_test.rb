@@ -58,6 +58,13 @@ class Methods2Test < MiniTest::Test
 		assert_equal true, @m.write_in_order?(0, 0, 1, true)
 	end
 
+	def test_less_by_ten
+		assert_equal true, @m.less_by_ten?(11, 0, 5)
+		assert_equal true, @m.less_by_ten?(3, 15, 10)
+		assert_equal true, @m.less_by_ten?(2, 6, 16)
+		assert_equal false, @m.less_by_ten?(4, 6, 13)
+	end
+
 	# def test_fizz_string
 	#	assert_equal Fizz, @m.fizz_string(fizz)
 	#	assert_equal Fizz, @m.fizz_string(fudge)

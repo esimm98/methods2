@@ -40,7 +40,9 @@ module Methods2
 		c > b && (b > a || bOk)
 	end
 
-	# TODO - write less_by_ten?
+	def less_by_ten?(a, b, c)
+		(a - b).abs >= 10 || (a - c).abs >= 10 || (b - c).abs >= 10
+	end
 	
 	# def fizz_string(str)
 	#	return list("str")
